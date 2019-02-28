@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Play Rock, Paper, Scissors</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Styles.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
+       
+    </head>
+    <body>
+        <div id="game" class="visible">
+            <h1>Play Rock, Paper, Scissors!</h1>
+            <h3>Click one of the images to play.</h3>
+            <div>
+
+            <a id="rock" onclick="play('Rock')"><img src="Images/rock.jpg" alt="Rock" width="150" height="150"></a>
+            <a id="paper" onclick="play('Paper')"><img src="Images/paper.jpg" alt="Paper" width="150" height="150"></a>
+            <a id="scissors" onclick="play('Scissors')"><img src="Images/scissors.jpg" alt="Scissors" width="150" height="150"></a>
+            
+            </div>
+            <div id="result"></div> 
+            
+            <aside id="replay"> <!--Markup for playing again--> 
+                <div id="content">
+                    <p id="title">Would you like to play again?</p>
+                    <div id="footer">
+                        <button id="yes">Yes</button>
+                        <button id="no">No</button>
+                    </div>
+                </div>
+            </aside>
+            <p id="win">Wins: <span class="value"></span></p>
+            <p id="lose">Losses: <span class="value"></span></p>
+            <p id="draw">Draws: <span class="value"></span></p>
+        </div>
+        <div id="goodbye">
+            <h1>Thank you for playing, goodbye!</h1>
+            <button id="refresh">Reload Game</button>
+        </div>
+        
+        <script src="playFunction.js"></script>
+    </body>
+</html>

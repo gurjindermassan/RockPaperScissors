@@ -1,0 +1,51 @@
+
+body {
+    font-family: 'Coiny', cursive;
+    font-size: 20px;
+    background-image: url("Images/Triangles.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+    color: navy;
+    text-align: center;
+}
+
+#replay {
+    display: none;
+    position: fixed;             /*doesn't look at any parent other than viewport*/
+    width: 100vw;                /*view port width. View port is not equal to browser window size or screen size*/
+    height: 100vh;               /*view port height*/
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#replay.visible {               /*creating a CSS class called 'visible' so we can toggle hide/display of blocks*/
+    display: block;
+}
+
+#replay #content {              /*chaining selectors, this means the CSS will apply to the content section of replay*/
+    position: absolute;         /*all elements automatically go to top left of the first parent element in the hieracrchy that has a non static position (body) - only when you specifiy top/left or right/bottom*/
+    transform: translate(-50%, -50%);        /*movement relative to reference point we define (centre) moved the internal contents visually This refers to SELF instead of parent*/
+    top: 50%;                                /*this is to move the registration of the ELEMENT*/
+    left: 50%;
+    padding: 20px;
+    background-color: yellow;
+    
+}
+
+#game {                       /*specificity - put the simplest definition first*/ 
+    display: none;
+}
+
+#game.visible {
+    display: block;
+}
+
+#goodbye {
+    display: none;
+}
+
+#goodbye.visible {
+    display: block;
+}
